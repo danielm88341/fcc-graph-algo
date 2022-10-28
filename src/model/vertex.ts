@@ -9,7 +9,7 @@ export default class Vertex {
         this.edges = [];
     }
 
-    addEdge(endVertex: Vertex, weight?: number): number {
+    addEdge(endVertex: Vertex, weight: number | null): number {
         return this.edges.push(new Edge(this, endVertex, weight));
     }
     removeEdge(endVertex: Vertex): number {
@@ -27,9 +27,10 @@ export default class Vertex {
         this.edges.forEach(value => {
             message += value.start.data + ' --> ' + value.end.data;
             if(showWeight) {
-                message += ` ( ${value.weight})'`;
+                message += ` (${value.weight})'`;
             }
             message += ', ';
         });
+        console.log(message);
     }
 }
