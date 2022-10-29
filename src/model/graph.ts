@@ -11,6 +11,9 @@ export default class Graph {
         this.vertices = [];
     }
 
+    getStartingVertex(entry = 0): Vertex {
+        return this.vertices[entry];
+    }
     addVertex(data: string): Vertex {
         const vertex = new Vertex(data);
         this.vertices.push(vertex);
