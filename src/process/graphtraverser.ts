@@ -15,8 +15,6 @@ export function depthFirstTraversal(start: Vertex, visited: Vertex[]) {
 }
 
 export function breadthFirstTransversal(start: Vertex, visited: Vertex[]) {
-    // console.log(`${start.data}`);
-
     let processQueue: Vertex[] = [];
     processQueue.push(start);
 
@@ -33,15 +31,4 @@ export function breadthFirstTransversal(start: Vertex, visited: Vertex[]) {
             }
         });
     }
-
-    // start.edges.forEach(edge => {
-    //     if(!visited.find(visited => {return visited ===edge.end})) {
-    //         visited.push(edge.end);
-    //         processQueue.push(edge.end);
-    //     }
-    // });
-
-    // processQueue.forEach(queued => {
-    //     breadthFirstTransversal(queued, visited);
-    // })
 }
