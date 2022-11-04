@@ -1,7 +1,7 @@
 import Graph from "./model/graph";
 import {getTestGraph} from "./data/testgraph";
 import Vertex from "./model/vertex";
-import {depthFirstTraversal} from "./process/graphtraverser";
+import {breadthFirstTransversal, depthFirstTraversal} from "./process/graphtraverser";
 
 // console.log('POC Graphline');
 // const busNetwork = new Graph(true, true);
@@ -16,7 +16,10 @@ import {depthFirstTraversal} from "./process/graphtraverser";
 const testGraph = getTestGraph(false, true);
 const start = testGraph.getStartingVertex(0);
 let vertices: Vertex[] = [];
+console.log('Depth First ====================');
 depthFirstTraversal(start, vertices);
+console.log('Breadth First ==================');
+breadthFirstTransversal(start, []);
 
 
 
