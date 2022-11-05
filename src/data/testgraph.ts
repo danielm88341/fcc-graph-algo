@@ -1,6 +1,6 @@
 import Graph from "../model/graph";
 
-export function getTestGraph(weighted: boolean, directed: boolean): Graph {
+export function getTestStarterGraph(weighted: boolean, directed: boolean): Graph {
     const testGraph = new Graph(weighted, directed);
     const startNode = testGraph.addVertex('v0.0.0');
     const v1 = testGraph.addVertex('v1.0.0');
@@ -29,4 +29,27 @@ export function getTestGraph(weighted: boolean, directed: boolean): Graph {
     testGraph.addEdge(v211, v2, null);
 
     return testGraph;
+}
+
+export function getTestDijkstraGraph(): Graph {
+    const graph = new Graph(true, true);
+    let a = graph.addVertex('A');
+    let b = graph.addVertex('B');
+    let c = graph.addVertex('C');
+    let d = graph.addVertex('D');
+    let e = graph.addVertex('E');
+    let f = graph.addVertex('F');
+    let g = graph.addVertex('G');
+
+    graph.addEdge(a,c,100);
+    graph.addEdge(a,b, 3);
+    graph.addEdge(a,d,4);
+    graph.addEdge(d,c,3);
+    graph.addEdge(d,e,8);
+    graph.addEdge(e,b,-2);
+    graph.addEdge(e,f, 10);
+    graph.addEdge(b,g, 9);
+    graph.addEdge(e,g, -50);
+
+    return graph;
 }

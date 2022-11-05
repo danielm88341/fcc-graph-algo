@@ -1,5 +1,5 @@
 import Graph from "./model/graph";
-import {getTestGraph} from "./data/testgraph";
+import {getTestStarterGraph} from "./data/testgraph";
 import Vertex from "./model/vertex";
 import {breadthFirstTransversal, depthFirstTraversal} from "./process/graphtraverser";
 
@@ -13,7 +13,7 @@ import {breadthFirstTransversal, depthFirstTraversal} from "./process/graphtrave
 // busNetwork.addEdge(stationShorton,stationDowntown, 10);
 // busNetwork.print();
 
-const testGraph = getTestGraph(false, true);
+const testGraph = getTestStarterGraph(false, true);
 const start = testGraph.getStartingVertex(0);
 let vertices: Vertex[] = [];
 console.log('Depth First ====================');
